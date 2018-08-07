@@ -2,22 +2,30 @@
 
 Ava is an Online Virtual Entity I'm building using Node.js and the Following Javascript Bot Ui
 
-BotUI
-Join the chat at https://gitter.im/BotUIChat/botui npm npm newsletter
+# BotUI
 
-A JavaScript framework to create conversational UIs.
+[![Join the chat at https://gitter.im/BotUIChat/botui](https://badges.gitter.im/BotUIChat/botui.svg)](https://gitter.im/BotUIChat/botui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![npm](https://img.shields.io/npm/v/botui.svg?style=flat-square)](https://www.npmjs.com/package/botui) [![npm](https://img.shields.io/npm/dm/botui.svg?style=flat-square)](https://www.npmjs.com/package/botui) [![newsletter](newsletter.png)](https://tinyletter.com/moinhq)
 
-Main Site - Read Docs - Examples
+> A JavaScript framework to create conversational UIs.
 
-Showcase 🎇✨
-We are listing all the cool projects that people are building with BotUI, here. See others' and add yours!
 
-Quick look
-preview
+[Main Site](https://botui.org) - [Read Docs](https://docs.botui.org) - [Examples](https://github.com/moinism/botui-examples)
 
+## Showcase 🎇✨
+
+We are listing all the cool projects that people are building with BotUI, [here](https://github.com/botui/botui/blob/master/Showcase.md). See others' and add yours!
+
+### Quick look
+
+![preview](preview.png)
+
+```html
 <div class="botui-app-container" id="botui-app">
   <bot-ui></bot-ui>
 </div>
+```
+
+```javascript
 var botui = new BotUI('botui-app'); // give it the id of container
 
 botui.message.bot({ // show first message
@@ -48,5 +56,9 @@ botui.message.bot({ // show first message
     content: 'You are feeling ' + res.text + '!'
   });
 });
-License
-MIT License - Copyrights (c) 2017 - Moin Uddin
+```
+
+
+### License
+
+[MIT License](https://github.com/moinism/botui/blob/master/LICENSE) - Copyrights (c) 2017 - Moin Uddin
