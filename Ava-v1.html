@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ava-VE-V1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="build/botui.min.css">
+     <link rel="stylesheet" href="build/botui-theme-default.css">
+    <meta name="description" content="Ava is an ongoing test using the Bot Ui">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gravitas+One|MedievalSharp|Modern+Antiqua|Noto+Serif|PT+Serif" rel="stylesheet">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="initAvaConvo1.js"></script>
+	
+	<style>
+body{
+	background-image: url("./images/bg3.png");
+	
+	max-width: 100%;
+	max-height: 100%;
+	font-family: 'Modern Antiqua', cursive;
+	}
+	
+	
+	#console {
+	z-index: +2
+	height: 20%;
+	max-width: 50%;
+	
+	border-style: solid;
+	border-color: #428274;
+	border-width: 8px;
+	margin-bottom: 0.7%;
+	margin-top: 0.7%;
+	border-radius: 25px;
+	background-color: #163A36;
+	color: #e1a03e;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+	}
+	
+	
+	
+   .btn-success {
+   background-color: #163A36;
+    border-radius: 15px;
+   border-style: solid;
+	border-color: #428274;
+	border-width: 8px;
+	
+   color: #e1a03e;
+   opacity: 0.9;
+    filter: alpha(opacity=90);
+	
+	margin-left: 86%;
+}
+
+  
+   
+   
+   #Ava-VE-v1 {
+	z-index: +1;
+	max-width: 432px;
+	max-height: 60%;
+	border-style: solid;
+	border-radius: 25px;
+	border-width: 12px;
+	border-color: #428274;
+	background-color: #428274;
+	color: #e1a03e;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+	}
+   
+   #botImage {
+   	border-style: solid;
+	border-radius: 25px;
+	border-width: 12px;
+	border-color: #428274;
+	color: #e1a03e;
+	
+   }
+   
+
+      
+        
+		
+
+	</style>
+  </head>
+  <body>
+  
+ 
+    <audio controls autoplay>
+      <source src="audio/CyberPunkAudio1.ogg" type="audio/ogg" id='page1Audio1'>
+	  <source src="cyberpunkAudio-1.mp3" type="audio/mpeg">
+	  Your browser does not support the audio element.
+    </audio>
+
+    
+ 
+	
+	
+ 
+
+  <div class="container-fluid text-center" id="console">    
+  <br>
+     <h1>Ava Virtual Entity Version 1</h1>
+	 <br>
+	 
+  <div class="row content">
+  
+  <div class="col-sm-4"> 
+        <img src="images/ava-marie-2.png" id='botImage' alt="Ava Virtual Entity Version 1" width="175px" height="300px" align="right">
+    </div>
+    <div class="col-sm-4"> 
+  
+    <div class="botui-app-container" id="Ava-VE-v1" align="left">
+	
+  <bot-ui></bot-ui>
+     </div>
+      <br>
+	 
+    </div>
+	
+	 
+	</div>
+	</div>
+	
+
+	
+	
+	
+	  
+	
+	
+	
+      <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="https://unpkg.com/botui/build/botui.js"></script>
+    <script src="./main.js" id="jsNavi"></script>
+	
+	 <script>
+	
+	
+	var x = document.getElementById("page1Audio1"); 
+
+    function playAudio() { 
+      x.play(); 
+    } 
+
+    function pauseAudio() { 
+      x.pause(); 
+    }
+	
+	
+	var botui = new BotUI('Ava-VE-v1');
+
+    botui.message.add({ // show a message
+  
+  delay: 1500,
+  content: 'Well hello and thanks for dropping by! ' + 'My name is Ava. ' + 'Would you mind telling me your name?'
+}).then(function () { // wait till its shown
+  return botui.action.text({ // show 'text' action
+  human: true,
+    action: {
+      placeholder: 'Your name'
+    }
+  });
+}).then(function (res) { // get the result
+
+
+  botui.message.add({
+   
+    delay: 500,
+    content: 'Awesome! ' + 'Its great to meet you ' + res.value
+  });
+}).then(function () {
+  botui.message.add({
+  delay: 1500,
+  content: 'I am a Virtual Entity that is currently being programmed to perform an array of useful tasks'
+  });
+  }).then(function () {
+  botui.message.add({
+  delay: 3500,
+  content: 'A Full List of my Functional capabilities will be accessible from the Main Menu as soon as there are features to list.'
+  });
+  }).then(function () {
+  botui.message.add({
+  delay: 5500,
+  content: 'Now I will show you the Main Menu.'
+  });
+  }).then(function () {
+  
+  botui.message.add({
+  delay: 8500,
+  type: 'embed', // this is 'text' by default
+  content: 'https://media.giphy.com/media/yBpepokxyCtfq/giphy.gif', 
+  delay:11500
+  
+
+});
+
+}).then(function () {
+  botui.message.add({
+  delay: 14500,
+  content: 'Oh ha ah haha! ' + 'Not that Main Menu'
+  });
+  })
+  
+  
+     
+
+  
+  
+  
+  
+	</script>
+   
+	
+	
+	
+	
+  
+	
+  
+
+     
+	
+
+  </body>
+</html>
